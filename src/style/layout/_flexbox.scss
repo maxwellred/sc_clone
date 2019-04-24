@@ -1,0 +1,46 @@
+/* FLEX BOX / prefixes */
+
+@mixin flexbox() {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+}
+
+@mixin flex($values) {
+  -webkit-box-flex: $values;
+  -moz-box-flex: $values;
+  -webkit-flex: $values;
+  -ms-flex: $values;
+  flex: $values;
+}
+
+@mixin order($val) {
+  -webkit-box-ordinal-group: $val;
+  -moz-box-ordinal-group: $val;
+  -ms-flex-order: $val;
+  -webkit-order: $val;
+  order: $val;
+}
+
+.flex {
+  @include flexbox();
+}
+
+.flex-center {
+  @include flexbox();
+  align-items: center;
+  justify-content: center;
+}
+
+// .flex-item {
+//   @include flex(1 1 100%);
+//   //   @include order(2);
+//   @include mediaMd {
+//     @include flex(1 1 30%);
+//   }
+//   @include mediaLg {
+//     @include flex(1 1 20%);
+//   }
+// }

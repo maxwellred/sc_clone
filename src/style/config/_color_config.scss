@@ -1,0 +1,72 @@
+//----------------//
+// Color Palette
+//----------------//
+
+// KEY
+//----------------//
+// sc = SoundCloud
+// p = primary
+// s = secondary
+// bg = background
+// med = medium
+// pos = positive
+// neg = negative
+// dm = dark mode
+//----------------//
+
+// SoundCloud Orange
+$sc-orange: #f50;
+$sc-orange-dark: #f30;
+
+// Basics
+$white: #fff;
+$black: #000;
+
+// Backgrounds / Borders / Shadows
+$p-bg: #fff;
+$s-bg: #f2f2f2;
+$s-bg-med: #e5e5e5;
+$s-bg-dark: #333333;
+$dark-bg: #111111;
+
+// Text
+$p-text: #333333;
+$s-text: #cccccc;
+$s-text-dark: #999999;
+// NOTE: transparent equivalent to s-text
+$s-text-transparent: rgba(255, 255, 255, 0.7);
+
+// Divider
+$divider: #f2f2f2;
+$divider-transparent: rgba(255, 255, 255, 0.1);
+
+// Icons
+$p-icon: #666666;
+$s-icon: #cccccc;
+
+// CTA Background / Border
+$p-pos-cta: #1da362;
+$s-pos-cta: #3e85ca;
+$neg-cta: #ca3b33;
+$undo-cta: #9b3eca;
+
+// Dynamically Set Color (if needed)
+@function set-text-color($color) {
+  @if (lightness($color) > 40) {
+    @return #000;
+  } @else {
+    @return #fff;
+  }
+}
+
+//------------------------//
+// DARK MODE Color Palette
+//------------------------//
+
+// DM Text
+// $dm-p-text:;
+// $dm-s-text:;
+
+// DM Background
+// $dm-p-bg:;
+// $dm-s-bg:;

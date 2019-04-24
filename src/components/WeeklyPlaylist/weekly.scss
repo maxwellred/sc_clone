@@ -1,0 +1,116 @@
+@import '../../style/config/color_config';
+@import '../../style/modules/profile_thumbnail';
+@import '../../style/modules/gradients';
+@import '../../style/modules/buttons';
+@import '../../style/modules/inputs';
+
+.weekly-container {
+  height: 100vh;
+  justify-content: center;
+}
+
+.parent-li {
+  width: 570px;
+  height: 220px;
+  .section-text-container {
+    margin-bottom: 25px;
+    line-height: 2em;
+    h2 {
+      color: $p-text;
+    }
+    p {
+      color: $s-text-dark;
+    }
+  }
+  .contents-container {
+    padding: 20px;
+    height: inherit;
+    width: inherit;
+    .img-container {
+      height: 100%;
+      position: relative;
+      margin-right: 20px;
+      img {
+        height: 100%;
+      }
+      .play-btn {
+        position: absolute;
+        top: 34%;
+        bottom: 34%;
+        left: 34%;
+        right: 34%;
+        border-radius: 50%;
+        background-color: $sc-orange;
+        align-items: center;
+        justify-content: center;
+        i {
+          color: $white;
+          font-size: 25px;
+          margin-left: 5px;
+        }
+        &:hover {
+          cursor: pointer;
+          background-color: $sc-orange-dark;
+        }
+      }
+    }
+    .playlist-container {
+      overflow-y: scroll;
+      overflow-x: hidden;
+      .track {
+        height: 40px;
+        font-size: 12px;
+        border-bottom: 1px solid $divider-transparent;
+        align-items: center;
+        .trackinfo {
+          color: $white;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+          .artist {
+            color: $s-text-transparent;
+          }
+        }
+        .hover-btns-container {
+          display: none;
+          margin: 0 13px 0 auto;
+          .hover-btns {
+            display: flex;
+            li {
+              border: 1px solid $s-text;
+              border-radius: 3px;
+              padding: 2px 4px;
+              margin-right: 4px;
+              &:last-of-type {
+                margin-right: 0;
+              }
+              i {
+                color: $white;
+              }
+            }
+          }
+        }
+        &:hover {
+          cursor: pointer;
+          background-color: $divider-transparent;
+          .hover-btns-container {
+            display: block;
+          }
+        }
+      }
+    }
+  }
+  .links-container {
+    padding: 20px 0;
+    border-bottom: 1px solid $s-bg;
+    .profile-section {
+      align-items: center;
+      p {
+        color: $s-text-dark;
+      }
+    }
+    button {
+      margin-left: auto;
+    }
+  }
+}

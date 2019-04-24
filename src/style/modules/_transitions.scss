@@ -1,0 +1,15 @@
+%transition-transform {
+  transition: transform 260ms ease-in-out;
+}
+
+%transition-background-color {
+  transition: background-color 260ms ease-in-out;
+}
+
+%transition-color {
+  transition: color 260ms ease-in-out;
+}
+
+%transition-opacity {
+  transition: opacity 260ms ease-in-out;
+}
