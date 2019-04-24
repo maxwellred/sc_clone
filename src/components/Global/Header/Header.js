@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import './menu.scss';
+import './header.scss';
 
-export default class Menu extends Component {
+export default class Header extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -22,7 +22,7 @@ export default class Menu extends Component {
   render() {
     return (
       <header className="header">
-        <nav className="breakpoint-width-container flex">
+        <nav className="global-width-container flex">
           <ul className="menu flex">
             <li>
               <div className="logo-sc flex-center">
@@ -53,7 +53,7 @@ export default class Menu extends Component {
                 Upgrade
               </Link>
             </li>
-            <li className="menu-upload flex-center">
+            <li className="menu-upload">
               <Link to={'#'} onClick={this.menuItemClick} className="flex-center">
                 Upload
               </Link>

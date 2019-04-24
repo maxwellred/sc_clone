@@ -1,9 +1,9 @@
 import React from 'react';
 
-export default function WeeklyImg(props) {
+export default function PlaylistImg(props) {
   return (
-    <div className="img-container">
-      <div className="play-btn flex">
+    <div className="pl-img">
+      <div className="pl-img-btn flex">
         <i className="fas fa-play" />
       </div>
       <img src={props.albumart} alt="Album Art" />

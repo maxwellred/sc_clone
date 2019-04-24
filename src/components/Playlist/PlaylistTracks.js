@@ -1,17 +1,17 @@
 import React from 'react';
 
-export default function WeeklyPlaylist(props) {
+export default function PlaylistTracks(props) {
   return (
-    <ul className="playlist-container">
+    <ul className="pl-list">
       {props.playlist.map(ele => {
         return (
-          <li className="track flex" key={ele.id}>
-            <div className="trackinfo">
-              <span className="artist">{ele.artist} - </span>
-              <span className="trackName">{ele.track}</span>
+          <li className="pl-list-item flex" key={ele.id}>
+            <div className="pl-list-item-trackinfo-container">
+              <span className="pl-list-item-artist">{ele.artist} - </span>
+              <span className="pl-list-item-trackname">{ele.track}</span>
             </div>
-            <div className="hover-btns-container">
-              <ul className="hover-btns">
+            <div className="pl-list-item-actions-container">
+              <ul className="pl-list-item-actions-list">
                 <li>
                   <i className="fas fa-heart" />
                 </li>

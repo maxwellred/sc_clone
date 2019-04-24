@@ -4,15 +4,18 @@
 @import '../../style/modules/buttons';
 @import '../../style/modules/inputs';
 
-.weekly-container {
+// TODO: Need to create App Top Level UL as part of the top level GRID layout
+//-----------------------//
+.placeholder-container {
   height: 100vh;
   justify-content: center;
 }
+//-----------------------//
 
-.parent-li {
+.playlist {
   width: 570px;
   height: 220px;
-  .section-text-container {
+  .pl-title-container {
     margin-bottom: 25px;
     line-height: 2em;
     h2 {
@@ -22,18 +25,18 @@
       color: $s-text-dark;
     }
   }
-  .contents-container {
+  .pl-content-container {
     padding: 20px;
     height: inherit;
     width: inherit;
-    .img-container {
+    .pl-img {
       height: 100%;
       position: relative;
       margin-right: 20px;
       img {
         height: 100%;
       }
-      .play-btn {
+      .pl-img-btn {
         position: absolute;
         top: 34%;
         bottom: 34%;
@@ -54,27 +57,27 @@
         }
       }
     }
-    .playlist-container {
+    .pl-list {
       overflow-y: scroll;
       overflow-x: hidden;
-      .track {
+      .pl-list-item {
         height: 40px;
         font-size: 12px;
         border-bottom: 1px solid $divider-transparent;
         align-items: center;
-        .trackinfo {
+        .pl-list-item-trackinfo-container {
           color: $white;
           overflow: hidden;
           text-overflow: ellipsis;
           white-space: nowrap;
-          .artist {
+          .pl-list-item-artist {
             color: $s-text-transparent;
           }
         }
-        .hover-btns-container {
+        .pl-list-item-actions-container {
           display: none;
           margin: 0 13px 0 auto;
-          .hover-btns {
+          .pl-list-item-actions-list {
             display: flex;
             li {
               border: 1px solid $s-text;
@@ -93,24 +96,25 @@
         &:hover {
           cursor: pointer;
           background-color: $divider-transparent;
-          .hover-btns-container {
+          .pl-list-item-actions-container {
             display: block;
           }
         }
       }
     }
   }
-  .links-container {
+  .pl-actions {
     padding: 20px 0;
     border-bottom: 1px solid $s-bg;
-    .profile-section {
+    .pl-actions-profile {
       align-items: center;
       p {
         color: $s-text-dark;
       }
     }
-    button {
+    .pl-actions-btn {
       margin-left: auto;
+      padding: 0 10px;
     }
   }
 }

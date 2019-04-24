@@ -26,24 +26,24 @@
 
 // ============= Widths
 
-.breakpoint-width-container {
+.global-width-container {
   margin: 0 auto;
 }
 
 @include mediaSm {
-  .breakpoint-width-container {
+  .global-width-container {
     width: 100%;
     // background-color: lightblue;
   }
 }
 @include mediaMd {
-  .breakpoint-width-container {
+  .global-width-container {
     width: 95vw;
     // background-color: lightgreen;
   }
 }
 @include mediaLg {
-  .breakpoint-width-container {
+  .global-width-container {
     width: 90vw;
     max-width: 1400px;
     // background-color: lightcoral;

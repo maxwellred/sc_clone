@@ -1,0 +1,85 @@
+@import '../../../style/config/color_config';
+
+.player {
+  position: fixed;
+  bottom: 0;
+  height: 46px;
+  width: 100%;
+  background-color: $s-bg;
+  border-top: 1px solid $s-bg-med;
+  .player-container {
+    height: inherit;
+    .player-controls-container {
+      height: 100%;
+      .pc-list {
+        .pc-list-item {
+          height: 100%;
+          i {
+            color: $s-icon-dark;
+            cursor: pointer;
+            height: 100%;
+            width: 46px;
+            &:hover {
+              color: $p-icon;
+            }
+          }
+        }
+        .pc-list-item-trackprogress {
+          height: 1px;
+          width: 400px;
+          min-width: 200px;
+          flex: 1;
+          background-color: $sc-orange;
+        }
+      }
+    }
+    .player-trackinfo-container {
+      height: 100%;
+      margin-left: auto;
+      .pt-img-container {
+        height: 100%;
+        padding: 7px;
+        img {
+          height: 100%;
+        }
+      }
+      .pt-trackinfo {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 5px;
+        p {
+          cursor: pointer;
+          color: $s-text-dark;
+          overflow: hidden;
+          white-space: nowrap;
+          text-overflow: ellipsis;
+          font-size: 0.8em;
+          &:first-of-type {
+            color: $s-text;
+          }
+          &:hover {
+            color: $p-text;
+          }
+        }
+      }
+      .pt-actions {
+        i {
+          cursor: pointer;
+          color: $s-text-dark;
+          height: 100%;
+          width: 30px;
+          font-size: 0.8em;
+          &:first-of-type {
+            color: $s-text;
+            &:hover {
+              color: $sc-orange;
+            }
+          }
+          &:hover {
+            color: $p-text;
+          }
+        }
+      }
+    }
+  }
+}

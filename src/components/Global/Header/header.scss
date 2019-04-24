@@ -1,6 +1,5 @@
-@import '../../style/config/color_config';
-@import '../../style/modules/inputs';
-@import '../../style/modules/profile_thumbnail';
+@import '../../../style/config/color_config';
+@import '../../../style/modules/inputs';
 
 .header {
   background: $s-bg-dark;
@@ -74,7 +73,7 @@
       .menu-messages,
       .menu-overflow {
         height: 100%;
-        width: 46px;
+        min-width: 46px;
         cursor: pointer;
         i {
           color: $p-icon;
@@ -83,31 +82,27 @@
           color: $s-icon;
         }
       }
-      // .menu-notifications,
-      // .menu-messages,
-      // .menu-overflow {
-      // }
       .menu-profile {
-        //
+        // TODO: sub-menu
       }
       .menu-notifications {
-        //
+        // TODO: red dot active state
       }
       .menu-messages {
-        //
+        // TODO: red dot active state
       }
       .menu-overflow {
-        //
+        // TODO: sub-menu
       }
     }
   }
-}
-.logo-sc {
-  background: linear-gradient(135deg, $sc-orange, $sc-orange-dark);
-  width: 80px;
-  height: 100%;
-  i {
-    color: $white;
-    font-size: 2.5em;
+  .logo-sc {
+    background: linear-gradient(135deg, $sc-orange, $sc-orange-dark);
+    width: 80px;
+    height: 100%;
+    i {
+      color: $white;
+      font-size: 2.5em;
+    }
   }
 }

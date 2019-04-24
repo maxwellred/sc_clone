@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
-import WeeklyPlaylist from './WeeklyPlaylist';
-import WeeklyImg from './WeeklyImg';
-import WeeklyLinks from './WeeklyLinks';
+import PlaylistTracks from './PlaylistTracks';
+import PlaylistImg from './PlaylistImg';
+import PlaylistActions from './PlaylistActions';
 import albumart from '../../assets/album_art.png';
-import './weekly.scss';
+import './playlist.scss';
 
-export default class WeeklyParent extends Component {
+export default class Playlist extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -51,19 +51,20 @@ export default class WeeklyParent extends Component {
     };
   }
 
+  // TODO: shouldnt be UL herr. should only be LI
   render() {
     return (
-      <ul className="weekly-container flex">
-        <li className="parent-li">
-          <div className="section-text-container">
+      <ul className="placeholder-container flex">
+        <li className="playlist">
+          <div className="pl-title-container">
             <h2>SoundCloud Weekly</h2>
             <p>All of SoundCloud. Just for you.</p>
           </div>
-          <div className="contents-container flex gradient">
-            <WeeklyImg albumart={this.state.albumart} />
-            <WeeklyPlaylist playlist={this.state.playlist} />
+          <div className="pl-content-container flex gradient">
+            <PlaylistImg albumart={this.state.albumart} />
+            <PlaylistTracks playlist={this.state.playlist} />
           </div>
-          <WeeklyLinks />
+          <PlaylistActions />
         </li>
       </ul>
     );
